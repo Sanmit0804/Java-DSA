@@ -3,7 +3,7 @@
 public class code2LargestInArray {
     public static void getLargest(int numbers[]) {
         int largest = Integer.MIN_VALUE;  // minimum possible value of integer
-        int smallest = Integer.MAX_VALUE;
+        int smallest = Integer.MAX_VALUE; // Maximum possible value of integer
 
         for (int i = 0; i < numbers.length; i++) {
             if(largest < numbers[i])
