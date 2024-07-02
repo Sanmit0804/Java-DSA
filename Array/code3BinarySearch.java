@@ -1,4 +1,6 @@
 // Binary Search in Array
+// prerequisite -> Sorted Array
+// Time complexity -> O(logn)
 
 public class code3BinarySearch {
 
@@ -16,7 +18,6 @@ public class code3BinarySearch {
                 end = mid - 1;
             }
         }
-
         return -1;
     }
 
