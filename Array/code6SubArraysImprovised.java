@@ -1,3 +1,5 @@
+// SubArray with the sum of elements
+
 public class code6SubArraysImprovised {
     public static void printSubArrays(int numbers[]) {
         int maxium = Integer.MIN_VALUE; // Assign minimum value possible for integer
