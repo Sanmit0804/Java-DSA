@@ -1,4 +1,5 @@
 // SubArray with the sum of elements
+// time Complexity = O(n^3)
 
 public class code6SubArraysImprovised {
     public static void printSubArrays(int numbers[]) {
