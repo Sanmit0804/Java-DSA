@@ -1,3 +1,5 @@
+# Arrays in Java
+
 Arrays in Java are a fundamental data structure used to store a fixed-size sequential collection of elements of the same type. Here's a detailed explanation of arrays, including their properties, methods, and usage:
 
 ### 1. Declaration, Instantiation, and Initialization
