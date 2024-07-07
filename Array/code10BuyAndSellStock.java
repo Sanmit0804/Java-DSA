@@ -1,3 +1,5 @@
+// Time complexity = O(n)
+
 public class code10BuyAndSellStock {
     public static int buyAndSellStock(int[] prices) {
         int buyPrice = Integer.MAX_VALUE;
