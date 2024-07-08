@@ -4,7 +4,7 @@ package Loops;
 
 import java.util.*;
 
-public class code8PrimeImprovised {
+public class code8PrimeInRange {
     public static void prime(int n) {
         for (int i = 1; i < n; i++) {
             int count = 0;
