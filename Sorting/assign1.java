@@ -20,7 +20,7 @@ public class assign1 {
         for (int i = 0; i < nums.length - 1; i++) {
             int minPos = i;
             for (int j = i+1; j < nums.length; j++) {
-                if (nums[minPos] > nums[j]) {
+                if (nums[minPos] < nums[j]) {
                     minPos = j;
                 }
             }
