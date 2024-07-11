@@ -1,5 +1,4 @@
-// Pairs in an Array
-
+// Pairs in an Arra
 // Time complexity = O(n^2)
 
 public class code5PairesInArray {

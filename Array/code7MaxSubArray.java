@@ -3,7 +3,7 @@
 
 public class code7MaxSubArray {
     public static void printSubArrays(int numbers[]) {
-        int maxium = Integer.MIN_VALUE; // Assign minimum value possible for integer
+        int maximum = Integer.MIN_VALUE; // Assign minimum value possible for integer
         int prefix[] = new int[numbers.length];
 
         prefix[0] = numbers[0];
@@ -19,13 +19,13 @@ public class code7MaxSubArray {
                 int currSum;
                 currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start - 1];
                 // System.out.println();
-                if (maxium < currSum) {
-                    maxium = currSum;
+                if (maximum < currSum) {
+                    maximum = currSum;
                 }
             }
             // System.out.println();
         }
-        System.out.println("Highest value is : " + maxium);
+        System.out.println("Highest value is : " + maximum);
     }
 
     public static void main(String[] args) {
