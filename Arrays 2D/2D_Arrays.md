@@ -148,4 +148,8 @@ for (int i = 0; i < transpose.length; i++) {
 
 ---
 
+<<<<<<< HEAD
 These notes cover the basics and some advanced usage of 2D arrays in Java. 
+=======
+These notes cover the basics and some advanced usage of 2D arrays in Java.
+>>>>>>> bf44fc60e0cf38ef3eea96724dc4ff1897352143
