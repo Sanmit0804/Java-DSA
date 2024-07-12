@@ -4,8 +4,10 @@ public class c17MaxProductSubarray {
             System.out.println("Array has no elements");
             return;
         }
-        int maxProduct = nums[0];
-        int minProduct = nums[0];
+        int maxProduct = Integer.MIN_VALUE;
+        // int maxProduct = nums[0];
+        int minProduct = Integer.MAX_VALUE;
+        // int minProduct = nums[0];
         int result = nums[0];
 
         for (int i = 1; i < nums.length; i++) {
