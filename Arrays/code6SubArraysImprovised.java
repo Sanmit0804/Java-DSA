@@ -25,8 +25,8 @@ public class code6SubArraysImprovised {
     }
 
     public static void main(String[] args) {
-        // int numbers[] = { 1, -2, 6, -1, 3 };
-        int numbers[] = { 2, 4, 6, 8, 10 };
+        int numbers[] = { -2,1,-3,4,-1,2,1,-5,4 };
+        // int numbers[] = { 2, 4, 6, 8, 10 };
         printSubArrays(numbers);
     }
 }
