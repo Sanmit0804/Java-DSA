@@ -29,5 +29,4 @@ public class c6Rearrange {
         int arr[] = { 4, 2, 8, 6, 15, 5, 9, 20 };
         rearrange(arr);
     }
-
 }
