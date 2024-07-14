@@ -16,7 +16,6 @@ public class c8RemoveBrackets {
 
     public static void main(String[] args) {
         String input1 = "a+((b-c)+d)";
-        String input2 = "(((a-b))+c)";
         removeBrackets(input1);
     }
 }
