@@ -2,7 +2,7 @@
 
 public class c3ASCIIValue {
     public static void main(String[] args) {
-        char ch = 'A';
+        char ch = 'Z';
         int ascii = ch;
         System.out.println(ascii);
     }
