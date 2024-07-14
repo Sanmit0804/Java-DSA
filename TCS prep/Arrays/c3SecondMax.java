@@ -7,26 +7,22 @@ public class c3SecondMax {
         int smallest = Integer.MAX_VALUE;
         int secondSmallest = Integer.MAX_VALUE;
 
-        for(int i = 0; i<arr.length; i++)
-        {
+        for (int i = 0; i < arr.length; i++) {
             largest = Math.max(largest, arr[i]);
             smallest = Math.min(smallest, arr[i]);
         }
-        for(int i = 0; i<arr.length ; i++)
-        {
-            if(secondLargest<arr[i] && arr[i] != largest)
-            {
+        for (int i = 0; i < arr.length; i++) {
+            if (secondLargest < arr[i] && arr[i] != largest) {
                 secondLargest = arr[i];
             }
-            if(secondSmallest>arr[i] && arr[i] != smallest)
-            {
+            if (secondSmallest > arr[i] && arr[i] != smallest) {
                 secondSmallest = arr[i];
             }
         }
-        System.out.println("Largest element is: "+largest);
-        System.out.println("Smallest elment is: "+smallest);
-        System.out.println("Second largest element is: "+secondLargest);
-        System.out.println("Second smallest element is: "+secondSmallest);
+        System.out.println("Largest element is: " + largest);
+        System.out.println("Smallest elment is: " + smallest);
+        System.out.println("Second largest element is: " + secondLargest);
+        System.out.println("Second smallest element is: " + secondSmallest);
     }
 
     public static void main(String[] args) {
