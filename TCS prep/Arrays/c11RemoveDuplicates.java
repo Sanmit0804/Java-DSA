@@ -1,24 +1,35 @@
 // Remove duplicates from sorted array
 
+import java.util.*;
+
 public class c11RemoveDuplicates {
 
     public static void main(String[] args) {
         int arr[] = { 1, 1, 2, 2, 2, 3, 3 };
-        int k = removeDuplicates(arr);
-        System.out.println("The array after removing duplicate elements is ");
-        for (int i = 0; i < k; i++) {
+        removeDuplicates(arr);
+    }
+
+    static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
     }
 
-    static int removeDuplicates(int[] arr) {
-        int i = 0;
-        for (int j = 1; j < arr.length; j++) {
-            if (arr[i] != arr[j]) {
-                i++;
-                arr[i] = arr[j];
-            }
+    static void removeDuplicates(int[] arr) {
+        HashSet<Integer> set = new HashSet<>();
+
+        // Add elements to the set (duplicates will be automatically removed)
+        for (int i = 0; i < arr.length; i++) {
+            set.add(arr[i]);
         }
-        return i + 1;
+
+        // Convert set back to an array
+        int[] newArray = new int[set.size()];
+        int index = 0;
+        for (Integer element : set) {
+            newArray[index++] = element;
+        }
+
+        printArray(newArray);
     }
 }

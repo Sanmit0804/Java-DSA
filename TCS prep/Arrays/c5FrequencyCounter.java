@@ -6,13 +6,12 @@ public class c5FrequencyCounter {
             if (!counted[i]) {
                 int count = 1;
                 for (int j = i + 1; j < arr.length; j++) {
-
                     if (arr[i] == arr[j]) {
                         count++;
-                        counted[j] = true;
+                        counted[j] = true; // mark this element as counted
                     }
                 }
-                System.out.println(arr[i] + ": " + count);
+                System.out.println("Element: " + arr[i] + " Frequency: " + count);
             }
         }
     }

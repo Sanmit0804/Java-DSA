@@ -18,5 +18,4 @@ public class c10Median {
         int arr[] = { 4, 7, 1, 2, 5, 6 };
         median(arr);
     }
-
 }
