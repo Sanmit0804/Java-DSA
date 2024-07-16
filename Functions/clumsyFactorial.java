@@ -2,25 +2,39 @@
 
 public class clumsyFactorial {
     public static int clumsy(int n) {
-        if (n == 0) return 0; // Handle edge case for n = 0
+        if (n == 0)
+            return 0; // Handle edge case for n = 0
         int fact = n; // Start with n
-        int operation = 0; // Initialize operation counter
+        int result = 0; 
+
+        boolean isFirstIteration = true;
 
         // Iterate from n-1 down to 1
-        for (int i = n - 1; i > 0; i--) {
-            if (operation == 0) {
-                fact = fact * i; // Multiplication
-            } else if (operation == 1) {
-                fact = fact / i; // Division
-            } else if (operation == 2) {
-                fact = fact + i; // Addition
-            } else if (operation == 3) {
-                fact = fact - i; // Subtraction
+        while (fact > 0) {
+            int temp = fact;
+
+            if (fact - 1 > 0) {
+                temp = temp * (fact - 1); // Multiplication
+                fact--;
             }
-            operation = (operation + 1) % 4; // Update operation
+            if (fact - 1 > 0) {
+                temp = temp / (fact - 1); // Division
+                fact--;
+            }
+            if (isFirstIteration) {
+                result = result + temp; // Addition
+                isFirstIteration = false;
+            } else {
+                result = result - temp;
+            }
+            if (fact - 1 > 0) {
+                result = result + (temp - 1); // Subtraction
+                temp--;
+            }
+            temp--;
         }
 
-        return fact;
+        return result;
     }
 
     public static void main(String[] args) {
