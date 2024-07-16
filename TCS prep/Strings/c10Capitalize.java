@@ -24,7 +24,6 @@ public class c10Capitalize {
             }
         }
         System.out.println(sb);
-
     }
 
     public static void main(String[] args) {
@@ -32,3 +31,6 @@ public class c10Capitalize {
         capitalize(str);
     }
 }
+
+
+// Doba jevii reet ch look at the  revision code

@@ -1,5 +1,3 @@
-// find a word in a given string that has the highest number of repeated letters. If not found, return -1.
-
 public class c24HighestRepeatedletters {
     public static String solve(String str) {
         String[] words = str.split(" ");
@@ -11,23 +9,27 @@ public class c24HighestRepeatedletters {
             String word = words[i];
             int[] letterCount = new int[26]; // Assuming only lowercase letters
 
+            int currentWordMaxFrequency = 0;
             for (int j = 0; j < word.length(); j++) {
-                char ch = word.charAt(i);
+                char ch = word.charAt(j); 
                 if (Character.isLetter(ch)) {
-                    int index = ch - 'a';
+                    int index = Character.toLowerCase(ch) - 'a'; // convert to lowercase
                     letterCount[index]++;
-                    maxFrequency = Math.max(maxFrequency, letterCount[index]);
+                    currentWordMaxFrequency = Math.max(currentWordMaxFrequency, letterCount[index]);
                 }
             }
-            if (maxFrequency > 1) {
+            
+            if (currentWordMaxFrequency > maxFrequency) {
+                maxFrequency = currentWordMaxFrequency;
                 maxFrequencyWord = word;
             }
         }
-        return maxFrequencyWord.isEmpty() ? "-1" : maxFrequencyWord;
+        
+        return maxFrequency > 1 ? maxFrequencyWord : "-1";
     }
 
     public static void main(String[] args) {
-        String str = "abcdefg google Microsoft";
-        System.out.println(solve(str));
+        String str = "abcdefg google microsoft";
+        System.out.println(solve(str));  // Output should be "google"
     }
 }
