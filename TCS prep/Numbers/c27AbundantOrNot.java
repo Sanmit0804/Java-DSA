@@ -17,7 +17,6 @@
 
 public class c27AbundantOrNot {
     public static void abundant(int num) {
-        int myNum = num;
         int sum = 0;
         int factor = 1;
         for (int i = 1; i < num; i++) {
