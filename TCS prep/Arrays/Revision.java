@@ -1,0 +1,169 @@
+import java.util.*;
+
+public class Revision {
+    public static void largest(int[] arr) {
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        System.out.println(max);
+    }
+
+    public static void smallest(int[] arr) {
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+        }
+        System.out.println(min);
+    }
+
+    public static void secondLargest(int[] arr) {
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (largest < arr[i]) {
+                largest = arr[i];
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (secondLargest < arr[i] && arr[i] != largest) {
+                secondLargest = arr[i];
+            }
+        }
+        System.out.println(secondLargest);
+    }
+
+    public static void secondSmallest(int[] arr) {
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            smallest = Math.min(smallest, arr[i]);
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (secondSmallest > arr[i] && arr[i] != smallest) {
+                secondSmallest = arr[i];
+            }
+        }
+        System.out.println(secondSmallest);
+    }
+
+    public static void reverse(int[] num) {
+        for (int i = 0; i < num.length; i++) {
+            for (int j = i + 1; j < num.length; j++) {
+                int temp = num[i];
+                num[i] = num[j];
+                num[j] = temp;
+            }
+        }
+        for (int i = 0; i < num.length; i++) {
+            System.out.print(num[i] + " ");
+        }
+    }
+
+    public static void frequencyCount(int[] arr) {
+        boolean counted[] = new boolean[arr.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (!counted[i]) {
+                int count = 1;
+                for (int j = i + 1; j < arr.length; j++) {
+                    if (arr[i] == arr[j]) {
+                        count++;
+                        counted[j] = true;
+                    }
+                }
+                System.out.println("Element: " + arr[i] + " Frequency: " + count);
+            }
+        }
+
+    }
+
+    public static void rearrange(int[] arr) {
+        Arrays.sort(arr);
+        for (int i = 0; i < arr.length / 2; i++) {
+            System.out.println(arr[i] + " ");
+        }
+        for (int i = arr.length - 1; i >= arr.length / 2; i--) {
+            System.out.println(arr[i] + " ");
+        }
+    }
+
+    public static void median(int[] arr) {
+        Arrays.sort(arr);
+        if (arr.length % 2 == 0) {
+            int ind1 = (arr.length / 2) - 1;
+            int ind2 = (arr.length / 2);
+            System.out.println((double) (arr[ind1] + arr[ind2]) / 2);
+        } else {
+            System.out.println(arr[arr.length / 2]);
+        }
+    }
+
+    public static void removeDuplicates(int[] arr) {
+        HashSet<Integer> set = new HashSet<>();
+
+        // Add elements to the set
+        for (int i = 0; i < arr.length; i++) {
+            set.add(arr[i]);
+        }
+
+        // Convert set back to the array
+        int[] newArray = new int[set.size()];
+        int index = 0;
+        for (int value : set) {
+            newArray[index++] = value;
+        }
+
+        for (int i = 0; i < newArray.length; i++) {
+            System.out.println(newArray[i]);
+        }
+    }
+
+    public static int removeDuplicates2(int[] arr) {
+        Arrays.sort(arr);
+        int i = 0;
+        for (int j = 1; j < arr.length; j++) {
+            if (arr[i] != arr[j]) {
+                i++;
+                arr[i] = arr[j];
+            }
+        }
+        return i + 1;
+    }
+
+    public static void main(String[] args) {
+        // int[] arr = { 4, 5, 6, 2, 7, 8, 1, 9 };
+        // largest(arr);
+        // smallest(arr);
+        // secondLargest(arr);
+        // secondSmallest(arr);
+
+        // int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        // reverse(arr);
+
+        // int[] arr = { 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4 };
+        // frequencyCount(arr);
+
+        // int arr[] = { 4, 2, 8, 6, 15, 5, 9, 20 };
+        // rearrange(arr);
+
+        // int arr[] = { 4, 7, 1, 2, 5, 6 };
+        // median(arr);
+
+        // int arr[] = { 1, 1, 2, 2, 2, 3, 3 };
+        // removeDuplicates(arr);
+
+        int arr[] = { 4, 3, 9, 2, 4, 1, 10, 89, 34 };
+        int k = removeDuplicates2(arr);
+        for (int i = 0; i < k; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
