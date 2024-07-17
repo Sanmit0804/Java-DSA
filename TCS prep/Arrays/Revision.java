@@ -138,7 +138,100 @@ public class Revision {
         return i + 1;
     }
 
+    public static void findNonRepeats(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            int count = 0;
+            for (int j = 0; j < nums.length; j++) {
+                if (nums[i] == nums[j] && i != j) {
+                    // System.out.println(nums[i]);
+                    count++;
+                    break;
+                }
+            }
+            if (count == 0) {
+                System.out.println(nums[i]);
+            }
+        }
+    }
+
+    public static void maxProductSubarray(int nums[]) {
+        if (nums == null || nums.length == 0) {
+            System.out.println("Array has no elements");
+        }
+        int maxProduct = Integer.MIN_VALUE;
+        int minProduct = Integer.MAX_VALUE;
+        int result = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] < 0) {
+                // Swap maxProduct and minProduct if the current number is negative
+                int temp = maxProduct;
+                maxProduct = minProduct;
+                minProduct = temp;
+            }
+
+            // Update maxProduct and minProduct
+            maxProduct = Math.max(nums[i], maxProduct * nums[i]);
+            minProduct = Math.min(nums[i], minProduct * nums[i]);
+
+            // Update the result
+            result = Math.max(result, maxProduct);
+        }
+        System.out.println(result);
+    }
+
+    public static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+
+    public static void reverse(int[] arr, int start, int end) {
+        while (start <= end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+    // Function to rotate k elements to the right
+    public static void rotateToRight(int[] arr, int n, int k) {
+        // Reverse the first n-k elements
+        reverse(arr, 0, n - k - 1);
+
+        // Reverse the last k elements
+        reverse(arr, n - k, n - 1);
+
+        // Reverse whole array
+        reverse(arr, 0, n - 1);
+    }
+
+    public static void rotateToLeft(int[] arr, int n, int k) {
+        // Reverse first k elements
+        reverse(arr, 0, k - 1);
+
+        // Reverse last n-k elements
+        reverse(arr, k, n - 1);
+
+        // Reverse the whole array
+        reverse(arr, 0, n - 1);
+    }
+
     public static void main(String[] args) {
+
+        int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
+        int n = arr.length;
+        int k = 2;
+        System.out.print("Before Rotating the k elements to right ");
+        printArray(arr);
+        rotateToLeft(arr, n, k);
+        System.out.print("After Rotating the k elements to left ");
+        // rotateToRight(arr, n, k);
+        // System.out.print("After Rotating the k elements to right ");
+        printArray(arr);
+
         // int[] arr = { 4, 5, 6, 2, 7, 8, 1, 9 };
         // largest(arr);
         // smallest(arr);
@@ -160,10 +253,16 @@ public class Revision {
         // int arr[] = { 1, 1, 2, 2, 2, 3, 3 };
         // removeDuplicates(arr);
 
-        int arr[] = { 4, 3, 9, 2, 4, 1, 10, 89, 34 };
-        int k = removeDuplicates2(arr);
-        for (int i = 0; i < k; i++) {
-            System.out.print(arr[i] + " ");
-        }
+        // int arr[] = { 4, 3, 9, 2, 4, 1, 10, 89, 34 };
+        // int k = removeDuplicates2(arr);
+        // for (int i = 0; i < k; i++) {
+        // System.out.print(arr[i] + " ");
+        // }
+
+        // int[] nums = { 1, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 3 };
+        // findNonRepeats(nums);
+
+        // int[] nums = { 1, 2, -3, 0, -4, -5 };
+        // maxProductSubarray(nums);
     }
 }
