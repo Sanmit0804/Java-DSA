@@ -6,7 +6,7 @@ public class myClass {
         // names of 5 students
         // String[] names = new String[5];
 
-        Student s1 = new Student();
+        Student s1 = new Student();     // Creating object 
         s1.rno[0] = 44;
         s1.name[0] = "Sanmit";
         s1.marks[0] = 87.4f;
@@ -15,6 +15,7 @@ public class myClass {
     }
 }
 
+// Student class
 class Student {
     // (Rollno, name & marsk) of the 5 students
     int[] rno = new int[5];
