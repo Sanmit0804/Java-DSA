@@ -6,19 +6,19 @@ public class myClass {
         // names of 5 students
         // String[] names = new String[5];
 
-        Student s1 = new Student();     // Creating object 
-        s1.rno[0] = 44;
-        s1.name[0] = "Sanmit";
-        s1.marks[0] = 87.4f;
+        Student s1 = new Student(); // Creating object
+        s1.no = 1;
+        s1.name = "Sanmit";
+        s1.marks = 99.99f;
 
-        System.out.println(s1.marks[0]);
+        System.out.println(s1.marks);
     }
 }
 
 // Student class
 class Student {
-    // (Rollno, name & marsk) of the 5 students
-    int[] rno = new int[5];
-    String[] name = new String[5];
-    float[] marks = new float[5];
+    // (Rollno, name & marks) of the 5 students
+    int no;
+    String name;
+    float marks;
 }
