@@ -9,6 +9,6 @@ public class StaticExample {
     // }
 
     void greeting() {
-        System.out.println("Hello Sanmit!");
+        System.out.println("Hello Sanmit Suthar!");
     }
 }
