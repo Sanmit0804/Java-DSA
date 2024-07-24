@@ -83,6 +83,17 @@ public class Revision2 {
         }
     }
 
+    public static void median(int[] arr) {
+        Arrays.sort(arr);
+        if (arr.length % 2 == 0) {
+            int ind1 = (arr.length / 2) - 1;
+            int ind2 = (arr.length / 2);
+            System.out.println((double) (arr[ind1] + arr[ind2]) / 2);
+        } else {
+            System.out.println(arr[arr.length / 2]);
+        }
+    }
+
     public static void main(String[] args) {
         // int[] arr = { 4, 5, 6, 2, 7, 8, 1, 9 };
         // MaxAndMin(arr);
@@ -96,7 +107,10 @@ public class Revision2 {
         // int arr[] = { 4, 2, 8, 6, 15, 5, 9, 20 };
         // rearrange(arr);
 
-        int arr[] = { 1, 1, 2, 2, 2, 3, 3 };
-        removeDuplicates(arr);
+        int arr[] = { 4, 7, 1, 2, 5, 6 };
+        median(arr);
+
+        // int arr[] = { 1, 1, 2, 2, 2, 3, 3 };
+        // removeDuplicates(arr);
     }
 }
