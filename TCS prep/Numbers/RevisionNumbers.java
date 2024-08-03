@@ -88,6 +88,30 @@ public class RevisionNumbers {
         System.out.println(sum);
     }
 
+    public static void sumOfGPSeries(float firstTerm, float commonRatio, float numberOfTerms) {
+        float sum = 0;
+        for (int i = 0; i < numberOfTerms; i++) {
+            sum = sum + firstTerm;
+            firstTerm = firstTerm * commonRatio;
+        }
+        System.out.println(sum);
+    }
+
+    public static void maxAndMin(int num) {
+        int d;
+        int mini = Integer.MAX_VALUE;
+        int maxi = Integer.MIN_VALUE;
+        while (num != 0) {
+            d = num % 10;
+            mini = Math.min(mini, d);
+            maxi = Math.max(maxi, d);
+            num = num / 10;
+        }
+
+        System.out.println("The minimum number is: " + mini);
+        System.out.print("The maximum number is: " + maxi);
+    }
+
     public static void main(String[] args) {
         // int num = 1234321;
         // System.out.println(isPalindrom(num));
@@ -109,10 +133,22 @@ public class RevisionNumbers {
         // int num = 28;
         // isPerfect(num);
 
-        Scanner sc = new Scanner(System.in);
-        float firstTerm = sc.nextFloat();
-        float commonDiff = sc.nextFloat();
-        float numberOfTerms = sc.nextFloat();
-        sumOfAPSeries(firstTerm, commonDiff, numberOfTerms);
+        // Scanner sc = new Scanner(System.in);
+        // float firstTerm = sc.nextFloat();
+        // float commonDiff = sc.nextFloat();
+        // float numberOfTerms = sc.nextFloat();
+        // sumOfAPSeries(firstTerm, commonDiff, numberOfTerms);
+
+        // Scanner sc = new Scanner(System.in);
+        // System.out.print("Enter the first term: ");
+        // float firstTerm = sc.nextFloat();
+        // System.out.print("Enter the common Difference: ");
+        // float commonRatio = sc.nextFloat();
+        // System.out.print("Enter the number of terms: ");
+        // float numberOfTerms = sc.nextFloat();
+        // sumOfGPSeries(firstTerm, commonRatio, numberOfTerms);
+
+        int num = 123456;
+        maxAndMin(num);
     }
 }
