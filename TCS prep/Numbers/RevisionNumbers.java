@@ -112,6 +112,19 @@ public class RevisionNumbers {
         System.out.print("The maximum number is: " + maxi);
     }
 
+    public static boolean isLeap(int year) {
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    return true;
+                }
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         // int num = 1234321;
         // System.out.println(isPalindrom(num));
@@ -148,7 +161,10 @@ public class RevisionNumbers {
         // float numberOfTerms = sc.nextFloat();
         // sumOfGPSeries(firstTerm, commonRatio, numberOfTerms);
 
-        int num = 123456;
-        maxAndMin(num);
+        // int num = 123456;
+        // maxAndMin(num);
+
+        int year = 2024;
+        System.out.println(isLeap(year));
     }
 }
