@@ -13,5 +13,4 @@ public class c1Smallest {
         int[] arr = { 4, 5, 6, 2, 7, 8, 1, 9 };
         smallest(arr);
     }
-
 }
