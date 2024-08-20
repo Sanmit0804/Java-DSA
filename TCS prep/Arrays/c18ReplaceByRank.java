@@ -39,5 +39,4 @@ public class c18ReplaceByRank {
         int arr[] = { 20, 15, 26, 2, 98, 6 };
         replaceByRank(arr);
     }
-
 }

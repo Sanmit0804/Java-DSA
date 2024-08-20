@@ -2,9 +2,9 @@
 
 public class c13AddElement {
     // Insert element at the begging of the array
-    public static int[] insertBeginning(int[] arr, int k) {
+    public static int[] insertBeginning(int[] arr, int element) {
         int[] newArray = new int[arr.length + 1];
-        newArray[0] = k;
+        newArray[0] = element;
         // System.arraycopy(arr, 0, newArray, 1, arr.length);
         for (int i = 1; i < newArray.length; i++) {
             newArray[i] = arr[i - 1];
