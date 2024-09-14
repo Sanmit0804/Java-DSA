@@ -42,7 +42,7 @@ public class Revision2 {
         // String str = "A man, a plan, a canal: Panama";
         // countVowels(str);
 
-        char ch = 'A';
-        ascii(ch);
+        // char ch = 'A';
+        // ascii(ch);
     }
 }
