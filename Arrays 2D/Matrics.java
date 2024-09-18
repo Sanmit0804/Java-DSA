@@ -30,7 +30,7 @@ public class Matrics {
         }
         System.out.println("Largest value in matrix is : "+ largest);
     }
-    
+     
     public static void main(String[] args) {
         System.out.println("Welcome to 2D array");
 
@@ -38,14 +38,14 @@ public class Matrics {
         int n = matrix.length; // length of row
         int m = matrix[0].length; // lenfth of columns
 
-        // INPUT
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                matrix[i][j] = sc.nextInt();
+        try (// INPUT
+        Scanner sc = new Scanner(System.in)) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    matrix[i][j] = sc.nextInt();
+                }
             }
         }
-
         // OUTPUT
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
