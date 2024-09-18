@@ -116,7 +116,7 @@ int[] clonedArray = originalArray.clone();
 
 ### Example Code
 Here is an example that demonstrates various operations on arrays:
-```java
+```
 import java.util.Arrays;
 
 public class ArrayExample {
