@@ -6,6 +6,7 @@ public class arrays {
         largest(arr);
         secondLargest(arr);
         secondSmallest(arr);
+        reverse(arr);
     }
 
     public static void smallest(int[] arr) {
@@ -57,5 +58,24 @@ public class arrays {
             }
         }
         System.out.println("Second Smallest value: " + secondMin);
+    }
+
+    public static void reverse(int [] arr)
+    {
+        for(int i = 0; i< arr.length; i++)
+        {
+            for(int j = i+1; j<arr.length; j++)
+            {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+
+        // print array
+        for(int i = 0; i<arr.length; i++)
+        {
+            System.out.print(arr[i]);
+        }
     }
 }
