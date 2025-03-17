@@ -60,8 +60,7 @@ public class arrays {
         System.out.println("Second Smallest value: " + secondMin);
     }
 
-    public static void reverse(int [] arr)
-    {
+    public static void reverse(int [] arr) {
         for(int i = 0; i< arr.length; i++)
         {
             for(int j = i+1; j<arr.length; j++)
