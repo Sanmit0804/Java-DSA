@@ -6,7 +6,6 @@ public class patterns2 {
 
     public static void butterflyPattern() {
         int n = 4;
-
         // Upper
         for (int i = 1; i <= n; i++) {
             // star
@@ -30,7 +29,6 @@ public class patterns2 {
             }
             System.out.println();
         }
-
         // Lower
         for (int i = n; i >= 1; i--) {
             // star
@@ -54,6 +52,9 @@ public class patterns2 {
             }
             System.out.println();
         }
+    }
 
+    public static void pattern(){
+        
     }
 }
