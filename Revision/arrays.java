@@ -1,12 +1,15 @@
 public class arrays {
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-        smallest(arr);
-        largest(arr);
-        secondLargest(arr);
-        secondSmallest(arr);
-        reverse(arr);
+        int[] arr = { 1, 2, 3, 3, 3, 4, 5 };
+        // smallest(arr);
+        // largest(arr);
+        // secondLargest(arr);
+        // secondSmallest(arr);
+        // reverse(arr);
+        // frequencyCounter(arr);
+        // sumOfElements(arr);
+        // avgOfElement(arr);
     }
 
     public static void smallest(int[] arr) {
@@ -60,11 +63,9 @@ public class arrays {
         System.out.println("Second Smallest value: " + secondMin);
     }
 
-    public static void reverse(int [] arr) {
-        for(int i = 0; i< arr.length; i++)
-        {
-            for(int j = i+1; j<arr.length; j++)
-            {
+    public static void reverse(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
@@ -72,9 +73,42 @@ public class arrays {
         }
 
         // print array
-        for(int i = 0; i<arr.length; i++)
-        {
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]);
         }
+    }
+
+    public static void frequencyCounter(int[] arr) {
+        boolean[] counted = new boolean[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            if (!counted[i]) {
+                int count = 1;
+                for (int j = i + 1; j < arr.length; j++) {
+                    if (arr[i] == arr[j]) {
+                        count++;
+                        counted[j] = true;
+                    }
+                }
+                System.out.println("Element: " + arr[i] + " Frequency: " + count);
+            }
+        }
+    }
+
+    public static void sumOfElements(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+        System.out.println(sum);
+    }
+
+    public static void avgOfElement(int[] arr) {
+        double sum = 0;
+        for(int i = 0; i<arr.length ; i++)
+        {
+            sum = sum + (double)arr[i];
+        }
+        double avg = sum/arr.length;
+        System.out.printf("%.2f", avg);
     }
 }
