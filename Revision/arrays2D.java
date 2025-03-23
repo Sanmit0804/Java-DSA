@@ -27,7 +27,7 @@ public class arrays2D {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 if (element == numbers[i][j]) {
-                    System.out.println("(" + i + " , " + j + ")");
+                    System.out.println("(" + i + " ," + j + ")");
                 }
             }
         }
