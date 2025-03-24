@@ -6,7 +6,8 @@ public class strings {
         // isPalindrom(name);
         // countVowels(name);
         // asciiValue(ch);
-        removeVowels(name);
+        // removeVowels(name);
+        removeSpecialCharacter(name);
     }
 
     public static void isPalindrom(String name) {
@@ -57,6 +58,18 @@ public class strings {
             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
                 continue;
             } else {
+                sb.append(ch);
+            }
+        }
+        System.out.println(sb);
+    }
+
+    public static void removeSpecialCharacter(String name) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < name.length(); i++) {
+            char ch = name.charAt(i);
+
+            if(Character.isLetter(ch)){
                 sb.append(ch);
             }
         }
