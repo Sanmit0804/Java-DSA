@@ -2,12 +2,20 @@ public class strings {
     public static void main(String[] args) {
         System.out.println("Hello World!");
         String name = "A man, a plan, a canal: Panama";
+        String str = "Sanmit";
+        String str2 = "a+((b-c)+d)";
         char ch = 'A';
+        String input = "abc12xyz34pqr56";
         // isPalindrom(name);
         // countVowels(name);
         // asciiValue(ch);
         // removeVowels(name);
-        removeSpecialCharacter(name);
+        // removeSpecialCharacter(name);
+        // reverse(str);
+        // removeBrackets(str2);
+        // SumOfNumbersInString(input);
+        String str3 = "take u forward is awesome";
+        capitalize(str3);
     }
 
     public static void isPalindrom(String name) {
@@ -69,8 +77,80 @@ public class strings {
         for (int i = 0; i < name.length(); i++) {
             char ch = name.charAt(i);
 
-            if(Character.isLetter(ch)){
+            if (Character.isLetter(ch)) {
                 sb.append(ch);
+            }
+        }
+        System.out.println(sb);
+    }
+
+    public static void reverse(String str) {
+        // StringBuilder sb = new StringBuilder();
+        // for (int i = str.length() - 1; i >= 0; i--) {
+        // sb.append(str.charAt(i));
+        // }
+        // System.out.println(sb);
+
+        String reverse = "";
+        for (int i = 0; i < str.length(); i++) {
+            reverse = str.charAt(i) + reverse;
+        }
+        System.out.println(reverse);
+    }
+
+    public static void removeBrackets(String str2) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < str2.length(); i++) {
+            char ch = str2.charAt(i);
+            if (ch == '(' || ch == ')') {
+                continue;
+            }
+            sb.append(ch);
+        }
+        System.out.println(sb);
+    }
+
+    public static void SumOfNumbersInString(String str) {
+        int sum = 0;
+        String temp = "";
+
+        for (char ch : str.toCharArray()) {
+            if (Character.isDigit(ch)) {
+                temp += ch;
+            } else {
+                if (!temp.isEmpty()) {
+                    sum += Integer.parseInt(temp);
+                    temp = "";
+                }
+            }
+        }
+
+        // Adding the last collected number if any
+        if (!temp.isEmpty()) {
+            sum += Integer.parseInt(temp);
+        }
+
+        System.out.println(sum);
+    }
+
+    public static void capitalize(String str) {
+        // capitalize the first and last letter of the word in string
+        StringBuilder sb = new StringBuilder();
+        String[] words = str.split(" ");
+
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+
+            if (word.length() == 1) {
+                sb.append(word.toUpperCase());
+            } else if (word.length() > 1) {
+                sb.append(Character.toUpperCase(word.charAt(0)))
+                        .append(word.substring(1, word.length() - 1))
+                        .append(Character.toUpperCase(word.charAt(word.length() - 1)));
+            }
+
+            if (i < words.length - 1) {
+                sb.append(" "); // add space between them
             }
         }
         System.out.println(sb);
