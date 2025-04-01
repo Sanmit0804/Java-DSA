@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class strings {
     public static void main(String[] args) {
         System.out.println("Hello World!");
@@ -6,6 +8,8 @@ public class strings {
         String str2 = "a+((b-c)+d)";
         char ch = 'A';
         String input = "abc12xyz34pqr56";
+        String ana1 = "LISTEN";
+        String ana2 = "SILENT";
         // isPalindrom(name);
         // countVowels(name);
         // asciiValue(ch);
@@ -14,8 +18,11 @@ public class strings {
         // reverse(str);
         // removeBrackets(str2);
         // SumOfNumbersInString(input);
-        String str3 = "take u forward is awesome";
-        capitalize(str3);
+
+        // String str3 = "take u forward is awesome";
+        // capitalize(str3);
+
+        isAnagram(ana1, ana2);
     }
 
     public static void isPalindrom(String name) {
@@ -155,4 +162,19 @@ public class strings {
         }
         System.out.println(sb);
     }
+
+    public static void isAnagram(String ana1, String ana2) {
+        char[] charArray1 = ana1.toCharArray();
+        char[] charArray2 = ana2.toCharArray();
+
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        if (Arrays.equals(charArray1, charArray2)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+
 }
