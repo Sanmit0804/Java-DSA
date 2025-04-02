@@ -10,6 +10,7 @@ public class strings {
         String input = "abc12xyz34pqr56";
         String ana1 = "LISTEN";
         String ana2 = "SILENT";
+        isAnagram(ana1, ana2);
         // isPalindrom(name);
         // countVowels(name);
         // asciiValue(ch);
@@ -22,7 +23,6 @@ public class strings {
         // String str3 = "take u forward is awesome";
         // capitalize(str3);
 
-        isAnagram(ana1, ana2);
     }
 
     public static void isPalindrom(String name) {
@@ -177,4 +177,5 @@ public class strings {
         }
     }
 
+    
 }
