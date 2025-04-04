@@ -3,14 +3,16 @@ import java.util.*;
 public class strings {
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        String name = "A man, a plan, a canal: Panama";
-        String str = "Sanmit";
-        String str2 = "a+((b-c)+d)";
-        char ch = 'A';
-        String input = "abc12xyz34pqr56";
-        String ana1 = "LISTEN";
-        String ana2 = "SILENT";
-        isAnagram(ana1, ana2);
+        // String name = "A man, a plan, a canal: Panama";
+        // String str = "Sanmit";
+        // String str2 = "a+((b-c)+d)";
+        // char ch = 'A';
+        // String input = "abc12xyz34pqr56";
+        // String ana1 = "LISTEN";
+        // String ana2 = "SILENT";
+        String str = "apple";
+
+        // isAnagram(ana1, ana2);
         // isPalindrom(name);
         // countVowels(name);
         // asciiValue(ch);
@@ -22,7 +24,7 @@ public class strings {
 
         // String str3 = "take u forward is awesome";
         // capitalize(str3);
-
+        maxOccurChar(str);
     }
 
     public static void isPalindrom(String name) {
@@ -177,9 +179,22 @@ public class strings {
         }
     }
 
-    
+    public static void maxOccurChar(String str) {
+        int[] arr = new int[256];
+        for (int i = 0; i < str.length(); i++) {
+            arr[str.charAt(i)]++;
+        }
+        int max = Integer.MIN_VALUE;
+        char ch = ' ';
+        for(int i = 0; i<str.length(); i++)
+        {
+            if(max < arr[str.charAt(i)])
+            {
+                max = arr[str.charAt(i)];
+                ch = str.charAt(i);
+            }
+        }
+        System.out.println(ch);
+    }
 
-
-
-    
 }
