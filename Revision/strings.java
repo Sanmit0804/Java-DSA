@@ -197,4 +197,6 @@ public class strings {
         System.out.println(ch);
     }
 
+    // starts learning SQL
+
 }
