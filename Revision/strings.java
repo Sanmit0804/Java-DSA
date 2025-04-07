@@ -24,7 +24,8 @@ public class strings {
 
         // String str3 = "take u forward is awesome";
         // capitalize(str3);
-        maxOccurChar(str);
+        char ans = maxOccurChar(str);
+        System.out.println(ans);
     }
 
     public static void isPalindrom(String name) {
@@ -179,7 +180,7 @@ public class strings {
         }
     }
 
-    public static void maxOccurChar(String str) {
+    public static char maxOccurChar(String str) {
         int[] arr = new int[256];
         for (int i = 0; i < str.length(); i++) {
             arr[str.charAt(i)]++;
@@ -194,6 +195,6 @@ public class strings {
                 ch = str.charAt(i);
             }
         }
-        System.out.println(ch);
+        return ch;
     }
 }
