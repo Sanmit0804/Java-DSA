@@ -10,7 +10,7 @@ public class strings {
         // String input = "abc12xyz34pqr56";
         // String ana1 = "LISTEN";
         // String ana2 = "SILENT";
-        String str = "apple";
+        // String str = "apple";
 
         // isAnagram(ana1, ana2);
         // isPalindrom(name);
@@ -24,8 +24,8 @@ public class strings {
 
         // String str3 = "take u forward is awesome";
         // capitalize(str3);
-        char ans = maxOccurChar(str);
-        System.out.println(ans);
+        // char ans = maxOccurChar(str);
+        // System.out.println(ans);
     }
 
     public static void isPalindrom(String name) {
