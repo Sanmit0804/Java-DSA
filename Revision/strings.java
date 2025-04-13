@@ -102,7 +102,8 @@ public class strings {
         // System.out.println(sb);
 
         String reverse = "";
-        for (int i = 0; i < str.length(); i++) {
+        for(int i =0; i < str.length(); i++)
+        {
             reverse = str.charAt(i) + reverse;
         }
         System.out.println(reverse);
