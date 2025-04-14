@@ -3,7 +3,7 @@ import java.util.*;
 public class strings {
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        // String name = "A man, a plan, a canal: Panama";
+        String name = "A man, a plan, a canal: Panama";
         // String str = "Sanmit";
         // String str2 = "a+((b-c)+d)";
         // char ch = 'A';
@@ -14,6 +14,7 @@ public class strings {
 
         // isAnagram(ana1, ana2);
         // isPalindrom(name);
+        System.out.println(isPalindrom(name));
         // countVowels(name);
         // asciiValue(ch);
         // removeVowels(name);
@@ -28,17 +29,25 @@ public class strings {
         // System.out.println(ans);
     }
 
-    public static void isPalindrom(String name) {
+    public static boolean isPalindrom(String name) {
+        // name = name.trim().toLowerCase();
+        // name = name.replaceAll("[^a-zA-Z]", "");
+
+        // for (int i = 0; i < name.length(); i++) {
+        // if (name.charAt(i) != name.charAt(name.length() - i - 1)) {
+        // System.out.println("Not Palindrom");
+        // return;
+        // }
+        // }
+        // System.out.println("Yes Palindrom");
         name = name.trim().toLowerCase();
-        name = name.replaceAll("[^a-zA-Z]", "");
 
         for (int i = 0; i < name.length(); i++) {
             if (name.charAt(i) != name.charAt(name.length() - i - 1)) {
-                System.out.println("Not Palindrom");
-                return;
+                return false;
             }
         }
-        System.out.println("Yes Palindrom");
+        return true;
     }
 
     public static void countVowels(String name) {
@@ -102,8 +111,7 @@ public class strings {
         // System.out.println(sb);
 
         String reverse = "";
-        for(int i =0; i < str.length(); i++)
-        {
+        for (int i = 0; i < str.length(); i++) {
             reverse = str.charAt(i) + reverse;
         }
         System.out.println(reverse);
@@ -188,10 +196,8 @@ public class strings {
         }
         int max = Integer.MIN_VALUE;
         char ch = ' ';
-        for(int i = 0; i<str.length(); i++)
-        {
-            if(max < arr[str.charAt(i)])
-            {
+        for (int i = 0; i < str.length(); i++) {
+            if (max < arr[str.charAt(i)]) {
                 max = arr[str.charAt(i)];
                 ch = str.charAt(i);
             }
